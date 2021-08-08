@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
+import DropdownSelector from 'src/components/dropdown-selector';
+import OrderBookRow from 'src/components/order-book-row';
+import useOrderBook, { ORDER_GROUPS_BY_MARKET } from 'src/hooks/use-order-book';
+import { SocketState, SocketMarkets } from 'src/hooks/use-order-book/use-order-book.types';
 
-import useOrderBook, { ORDER_GROUPS_BY_MARKET } from '../../hooks/use-order-book';
-import { SocketState, SocketMarkets } from '../../hooks/use-order-book/use-order-book.types';
-import DropdownSelector from '../dropdown-selector';
-import OrderBookRow from '../order-book-row';
 import {
   Bids,
   Container,
