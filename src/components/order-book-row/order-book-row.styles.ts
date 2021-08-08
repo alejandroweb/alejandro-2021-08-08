@@ -28,7 +28,7 @@ const CustomText = styled.Text`
 `;
 
 export const PriceText = styled(CustomText)<Pick<Props, 'type'>>`
-  color: ${({ type }) => (type === 'ask' ? '#31ae7b' : '#D73E42')};
+  color: ${({ type }) => (type === 'ask' ? '#31ae7b' : '#d73e42')};
 `;
 
 export const SizeText = styled(CustomText)``;

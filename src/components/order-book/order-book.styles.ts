@@ -60,3 +60,20 @@ export const KillerButton = styled(MaterialIcons.Button).attrs({
   name: 'error-outline',
   backgroundColor: '#B3191F',
 })``;
+
+export const Error = styled(SafeAreaView)`
+  background-color: #d73e42;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 8px;
+`;
+
+export const ErrorText = styled.Text`
+  color: #ffffff;
+  font-weight: 600;
+`;

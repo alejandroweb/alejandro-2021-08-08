@@ -8,6 +8,8 @@ import { SocketState, SocketMarkets } from 'src/hooks/use-order-book/use-order-b
 import {
   Bids,
   Container,
+  Error,
+  ErrorText,
   Footer,
   FooterButtonWrapper,
   Header,
@@ -82,6 +84,11 @@ const OrderBook: React.FC<object> = () => {
         </FooterButtonWrapper>
         <KillerButton onPress={handleOnPressKill}>Kill Feed</KillerButton>
       </Footer>
+      {readyState === SocketState.Closed ? (
+        <Error>
+          <ErrorText>Error retrieving information from server</ErrorText>
+        </Error>
+      ) : null}
     </Container>
   );
 };
